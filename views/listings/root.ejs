@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Render Image</title>
+</head>
+<body>
+  <h1>Listing Image</h1>
+
+  <% for(let images of image) { %>
+    <img src="<%= images.url %>" alt="<%= image.filename %>">
+  <% } %>
+ 
+</body>
+</html>

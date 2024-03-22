@@ -16,9 +16,8 @@ const geocodingClient = mbxGeocoding({ accessToken: mapToken });
 //     res.send("Hi, I am root");
 //   });
 
-router.route("/")
-//Index Route
-.get( wrapAsync(listingcontroller.index))
+route.get("/")
+( wrapAsync(listingcontroller.index))
 
 // Create Route
 .post( isLoggedIn,upload.single("listing[image]"), wrapAsync(listingcontroller.createListings)

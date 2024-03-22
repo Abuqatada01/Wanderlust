@@ -4,7 +4,7 @@ const router = express.Router({mergeParams : true});
 
 const Review = require("../models/review.js");
 const wrapAsync = require("../utils/wrapAsync.js");
-const ExpressError = require("../utils/ExpressError.js");
+const ExpressError = require("../utils/expressError.js");
 const { reviewSchema } = require("../schema.js");
 const Listing = require("../models/listing.js");
 const { isLoggedIn, isOwner ,saveRedirectUrl , isReviewAuthor } = require("../middleware.js");

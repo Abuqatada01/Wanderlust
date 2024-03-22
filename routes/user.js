@@ -32,13 +32,13 @@ const userController = require("../controllers/user.js");
 
 // Sign Up
 
-router.route("/useres/signup")
+router.route("/signup")
 .get(userController.renderSignUp)
 .post(userController.getSignUp 
 );
 
 
-router.route("/users/login")
+router.route("/login")
 // Login Route
 .get(userController.renderLoginForm )
 .post(
@@ -53,7 +53,7 @@ router.route("/users/login")
 
 // Logout Routes
 
-router.get("/users/logout",userController.logout);
+router.get("/logout",userController.logout);
 
 
 module.exports = router;

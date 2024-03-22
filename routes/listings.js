@@ -16,7 +16,7 @@ const geocodingClient = mbxGeocoding({ accessToken: mapToken });
 //     res.send("Hi, I am root");
 //   });
 
-router.route("/listings")
+router.route("/")
 //Index Route
 .get( wrapAsync(listingcontroller.index))
 
@@ -27,9 +27,9 @@ router.route("/listings")
 
 
 //New Route
-router.get("/listings/new", isLoggedIn, listingcontroller.newform);
+router.get("/new", isLoggedIn, listingcontroller.newform);
 
-router.route("/listings/:id")
+router.route("/:id")
 //Show Route
 .get( wrapAsync(listingcontroller.showListing))
 //Update Route
@@ -41,6 +41,6 @@ router.route("/listings/:id")
 
 
 //Edit Route
-router.get("/listings/:id/edit", isLoggedIn, isOwner, wrapAsync(listingcontroller.renderEditListings));
+router.get("/:id/edit", isLoggedIn, isOwner, wrapAsync(listingcontroller.renderEditListings));
 
 module.exports = router;

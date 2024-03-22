@@ -27,7 +27,7 @@ const validateReview = (req, res, next) => {
   // reveiw
 // Post reivew Route
 
-router.post("/listings/:id/reviews",
+router.post("/",
 
   isLoggedIn,
  validateReview,
@@ -38,7 +38,7 @@ router.post("/listings/:id/reviews",
   // delete Review Route
   
   router.delete(
-    "/listings/:id/reviews/:reviewId",isLoggedIn ,isReviewAuthor ,
+    "/:reviewId",isLoggedIn ,isReviewAuthor ,
     wrapAsync(reviewController.deleteReview)
   );
   module.exports = router;
